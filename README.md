@@ -16,6 +16,16 @@ It only affects the SSH login.
 
 3. Run `sudo make install` to install the module.
 
+### Configuration
+
+You can change `prob` by updating `/etc/pam.d/sshd`.
+
+This value is the probability of the module to deny the login.
+
+```
+auth   required    fkpass.so prob=0.1
+```
+
 ## Uninstallation
 
 1. Run `sudo make uninstall` to uninstall the module.
